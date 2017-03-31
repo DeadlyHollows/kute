@@ -129,7 +129,8 @@ public class RegisterActivity extends AppCompatActivity implements
                             Toast.makeText(RegisterActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(RegisterActivity.this, "Authentication Done."+task.getResult().getUser().getDisplayName()+" - "+task.getResult().getUser().getDisplayName()+" - "+task.getResult().getUser().getEmail()+" - "+task.getResult().getUser().getPhotoUrl().getPath()+" - ",
+                            Toast.makeText(RegisterActivity.this, "Authentication Done."+task.getResult()
+                                            .getUser().getDisplayName()+" - "+task.getResult().getUser().getDisplayName()+" - "+task.getResult().getUser().getEmail()+" - "+task.getResult().getUser().getPhotoUrl().getPath()+" - ",
                                     Toast.LENGTH_SHORT).show();
                             getImage(task.getResult().getUser().getPhotoUrl().toString());
 
@@ -321,17 +322,18 @@ public class RegisterActivity extends AppCompatActivity implements
         Toast.makeText(getApplicationContext(),"You have been Signout from the Kute",Toast.LENGTH_LONG).show();
         //updateUI(null);
     }
-public void getImage(String url){
-    ImageRequest ir = new ImageRequest(url, new Response.Listener<Bitmap>() {
-        @Override
-        public void onResponse(Bitmap response) {
-            ImageHandler.saveImageToprefrence(getSharedPreferences(ImageHandler.MainKey,MODE_PRIVATE),response);
-            ImageView iv=(ImageView)findViewById(R.id.imageView);
-            iv.setImageBitmap(response);
-        }
-    }, 0, 0, null, null);
-    rq.add(ir);
 
-}
+    public void getImage(String url){
+        ImageRequest ir = new ImageRequest(url, new Response.Listener<Bitmap>() {
+            @Override
+            public void onResponse(Bitmap response) {
+                ImageHandler.saveImageToprefrence(getSharedPreferences(ImageHandler.MainKey,MODE_PRIVATE),response);
+                ImageView iv=(ImageView)findViewById(R.id.imageView);
+                iv.setImageBitmap(response);
+            }
+        }, 0, 0, null, null);
+        rq.add(ir);
+
+    }
 
 }

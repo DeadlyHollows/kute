@@ -18,11 +18,11 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        new DelayTask().execute(); // This will delay the spalsh scrren and redierct to the login/register screen based
-        //on the ststus of the user.
+        new DelayTask().execute(); // This will delay the spalsh screen and redirect to the login/register screen based
+        //on the status of the user.
     }
 
-    class DelayTask extends AsyncTask<Void,Void,Void>{
+    private class DelayTask extends AsyncTask<Void,Void,Void>{
 
         @Override
         protected Void doInBackground(Void... params) {
@@ -39,21 +39,31 @@ public class SplashActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
 
-            SharedPreferences sharedPref =getPreferences(Context.MODE_PRIVATE);
+            SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
             Bitmap userpic = ImageHandler.getUserImage(getSharedPreferences(ImageHandler.MainKey,MODE_PRIVATE));
 
-            if(userpic==null){ //User is not registered in the system.
+            // FIXME: userpic == NULL is always true ...
 
-                Intent regIntent =new Intent(SplashActivity.this, RegisterActivity.class);
-                startActivity(regIntent);
+            // TODO: Make the if else afterwards ...
+
+            Intent regIntent = null;
+
+
+
+    /*        if(userpic==null){ //User is not registered in the system.
+
+                regIntent = new Intent(SplashActivity.this, RegisterActivity.class);
+
             }
             else{ //User registered in the system.
+*/
+                regIntent = new Intent(SplashActivity.this, LandActivity.class);
 
-                Intent regIntent =new Intent(SplashActivity.this, LandActivity.class);
-                startActivity(regIntent);
-            }
+  //          }
 
-
+            startActivity(regIntent);
+            finish(); // Finishef off the activity after sending the intent ...
+            // Thus, when back button is pressed, this activity can't open, since it is popped from the activity backstack ...
 
         }
     }

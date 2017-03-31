@@ -1,30 +1,35 @@
 {
   "project_info": {
-    "project_number": "512059903778",
-    "firebase_url": "https://kutenew-c36c1.firebaseio.com",
-    "project_id": "kutenew-c36c1",
-    "storage_bucket": "kutenew-c36c1.appspot.com"
+    "project_number": "666497050971",
+    "firebase_url": "https://scarnedice-dc34e.firebaseio.com",
+    "project_id": "scarnedice-dc34e",
+    "storage_bucket": "scarnedice-dc34e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:512059903778:android:e5312257f7c86a49",
+        "mobilesdk_app_id": "1:666497050971:android:f25f682467415905",
         "android_client_info": {
-          "package_name": "com.scorelab.kute.kute"
+          "package_name": "com.example.directioner.scarnedice"
         }
       },
       "oauth_client": [
         {
-          "client_id": "512059903778-uto3b2anj6phigvs60t99bbb1sl0oe7d.apps.googleusercontent.com",
+          "client_id": "666497050971-i30l9lim95nct85qlrmarainqv0o7e0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.directioner.scarnedice",
+            "certificate_hash": "5581e3dc67ca5611395e8675d8bf169931a6e16f"
+          }
+        },
+        {
+          "client_id": "666497050971-p08v6o4497h7cvvqoktks3engfbdfn59.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDrROeYR1glcHf4yPmneck3KbcS3fK4LAo"
-        },
-        {
-          "current_key": "AIzaSyCSZ7SOif62k5h3JSO4J9hhkFMsvzjJzO8"
+          "current_key": "AIzaSyACdBkChNBBej-l-K5RljEheQNX3k42Mfg"
         }
       ],
       "services": {
@@ -32,8 +37,57 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666497050971-p08v6o4497h7cvvqoktks3engfbdfn59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666497050971:android:e5312257f7c86a49",
+        "android_client_info": {
+          "package_name": "com.scorelab.kute.kute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666497050971-kd1a0n18i3vhv2rl5jfj4fuan1pv8qbs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scorelab.kute.kute",
+            "certificate_hash": "8ee01dc45c9f5bc97b91a62a86d98729fe721322"
+          }
+        },
+        {
+          "client_id": "666497050971-p08v6o4497h7cvvqoktks3engfbdfn59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACdBkChNBBej-l-K5RljEheQNX3k42Mfg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666497050971-p08v6o4497h7cvvqoktks3engfbdfn59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
